@@ -1,7 +1,15 @@
+import os
+
 DEBUG = False
+
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 ROOT_URLCONF = 'app.urls'
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(os.path.dirname(BASE_DIR), 'static/')
+]
 
 INSTALLED_APPS = [
     # Core Apps
